@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieTicketBox"
         tools:targetApi="31">
+        <activity android:name=".ui.Profile.SelectSeatActivity"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

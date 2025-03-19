@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Full Name"
+        android:textColor="#FFFFFF"
+        android:background="@android:color/darker_gray"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameInput"
+        android:layout_marginTop="10dp"
+        android:hint="Email"
+        android:textColor="#FFFFFF"
+        android:background="@android:color/darker_gray"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailInput"
+        android:layout_marginTop="10dp"
+        android:hint="Password"
+        android:textColor="#FFFFFF"
+        android:background="@android:color/darker_gray"
+        android:padding="10dp"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/passwordInput"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#FFC107"
+        android:text="Register"
+        android:textColor="#090000" />
+
+</RelativeLayout>

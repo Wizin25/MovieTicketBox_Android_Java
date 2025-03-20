@@ -21,8 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/nameInput"
         android:layout_marginTop="10dp"
-        android:hint="Email"
-        android:textColor="#FFFFFF"
+        android:hint="Username"
+        android:textColor="#090909"
         android:background="@android:color/darker_gray"
         android:padding="10dp" />
 
@@ -33,7 +33,7 @@
         android:layout_below="@id/emailInput"
         android:layout_marginTop="10dp"
         android:hint="Password"
-        android:textColor="#FFFFFF"
+        android:textColor="#090909"
         android:background="@android:color/darker_gray"
         android:padding="10dp"
         android:inputType="textPassword" />

@@ -22,7 +22,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private Button signInButton;
+    private Button signInButton, signUpButton;
     private EditText emailInput, passwordInput;
 
     private static final String TAG = "LoginActivity";  // Thêm tag để log
@@ -33,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         signInButton = findViewById(R.id.signInButton);
+        signUpButton = findViewById(R.id.signUpButton);
         emailInput = findViewById(R.id.emailInput);
         passwordInput = findViewById(R.id.passwordInput);
 
@@ -55,6 +56,15 @@ public class LoginActivity extends AppCompatActivity {
 
                 // Gọi API đăng nhập
                 loginUser(username, password);
+            }
+        });
+        // Xử lý sự kiện khi nhấn nút "Sign Up"
+        signUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Mở màn hình đăng ký (RegisterActivity)
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -100,6 +110,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Login failed: " + response.message(), Toast.LENGTH_SHORT).show();
                 }
             }
+
 
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {

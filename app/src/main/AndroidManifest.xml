@@ -30,7 +30,7 @@
         <activity android:name=".Login.RegisterActivity"
             android:exported="true"/>
         <activity android:name=".ui.Movie.MovieDetailsActivity" />
-
+        <activity android:name=".ui.Profile.SelectSeatActivity"/>
     </application>
 
 </manifest>

@@ -29,6 +29,7 @@
             android:exported="true"/>
         <activity android:name=".Login.RegisterActivity"
             android:exported="true"/>
+        <activity android:name=".ui.Movie.MovieDetailsActivity" />
 
     </application>
 

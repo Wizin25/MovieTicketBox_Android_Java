@@ -55,5 +55,8 @@ dependencies {
 
     // GSON (dùng để chuyển đổi JSON thành đối tượng Java)
     implementation ("com.google.code.gson:gson:2.8.8")
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+    implementation ("com.google.android.material:material:1.4.0")
+    implementation ("androidx.cardview:cardview:1.0.0")
 
 }

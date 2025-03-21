@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="16dp">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/titlePayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment"
+        android:textSize="23sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Thông tin phim -->
+    <LinearLayout
+        android:id="@+id/movieInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#1C1C1C"
+        app:layout_constraintTop_toBottomOf="@+id/titlePayment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp">
+
+        <ImageView
+            android:id="@+id/imgMovie"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_movie" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="12dp">
+
+            <TextView
+                android:id="@+id/txtMovieTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avengers: Infinity War"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFC107" />
+
+            <TextView
+                android:id="@+id/txtCinema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vincom Ocean Park CGV"
+                android:textSize="14sp"
+                android:textColor="#B3B3B3" />
+
+            <TextView
+                android:id="@+id/txtDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10.12.2022 · 14:15"
+                android:textSize="14sp"
+                android:textColor="#B3B3B3" />
+
+            <TextView
+                android:id="@+id/txtDateTime2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "Price: 100.000 VND"
+                android:textColor="#B3B3B3"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Thêm TextView hiển thị số ghế -->
+    <TextView
+        android:id="@+id/txtSeatNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seat: H7, H8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="start"
+        android:paddingTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movieInfoLayout" />
+
+
+    <!-- Nhập số tiền -->
+    <EditText
+        android:id="@+id/edtAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Nhập số lượng vé: "
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BBBBBB"
+        android:inputType="number"
+        android:backgroundTint="#CCCCCC"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movieInfoLayout"/>
+
+
+    <!-- Phương thức thanh toán -->
+    <LinearLayout
+        android:id="@+id/paymentMethodZaloPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="#1C1C1C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtAmount"
+        android:layout_marginTop="16dp">
+
+        <FrameLayout
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rounded_white_bg"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:src="@drawable/ic_zalopay"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ZaloPay"
+            android:textColor="#FFFFFF"
+            android:paddingStart="8dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Button Continue -->
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:backgroundTint="#FFC107"
+        app:layout_constraintTop_toBottomOf="@+id/paymentMethodZaloPay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

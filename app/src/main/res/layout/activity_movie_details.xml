@@ -290,8 +290,8 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
-        android:layout_width="192dp"
-        android:layout_height="78dp"
+        android:layout_width="195dp"
+        android:layout_height="66dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/rounded_gray"
         android:orientation="horizontal"
@@ -319,8 +319,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="189dp"
-        android:layout_height="76dp"
+        android:layout_width="191dp"
+        android:layout_height="68dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/rounded_gray"

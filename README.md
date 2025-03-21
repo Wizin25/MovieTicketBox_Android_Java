@@ -44,7 +44,7 @@ Mở Android Studio, chọn Run hoặc sử dụng lệnh sau để chạy ứng
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">157.66.27.96</domain>
+        <domain includeSubdomains="true"><your-api-domain></domain>
     </domain-config>
 </network-security-config>
 ```

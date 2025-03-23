@@ -71,6 +71,63 @@ Và trong AndroidManifest.xml:
 - **Khắc phục**: Kiểm tra log của server hoặc xem lại API của bạn.
 ## Contributing 🤝
 Chúng tôi rất hoan nghênh đóng góp từ cộng đồng! Nếu bạn có ý tưởng hay hoặc phát hiện lỗi, vui lòng tạo Issue hoặc gửi Pull Request.
+# 👥 Git Workflow cho teamwork (Bạn Thư đọc cái này nhé)
+
+### 🚨 Vấn đề:
+Khi có 2 người cùng pull `main` về để làm việc nhưng merge code không đúng cách:
+- Phú merge trước, Đạt merge sau → nếu Đạt không cập nhật lại từ `main` mới → phần code của Phú **có thể bị mất** khi merge Đạt.
+
+### ✅ Cách giải quyết đúng:
+1. **Mỗi người làm trên nhánh riêng** (không code trực tiếp trên `main`).
+2. Trước khi tạo Pull Request:
+```sh
+# Đảm bảo đang ở đúng nhánh làm việc
+git checkout dat-branch
+
+# Kéo phiên bản mới nhất từ main về nhánh của bạn
+git pull origin main
+```
+
+3. Nếu có conflict → Git sẽ yêu cầu resolve → resolve xong `commit` lại.
+```sh
+git add .
+git commit -m "resolve conflict"
+git push origin dat-branch
+```
+4. **Sau khi đã cập nhật với main**, mới được tạo Pull Request.
+5. Người quản lý sẽ **review & merge** lên main.
+
+### 🛡️ Gợi ý:
+- Tránh code trên `main`.
+- Luôn **pull main trước khi merge hoặc tạo pull request**.
+- Có thể dùng GitHub Actions để kiểm tra tự động conflict hoặc build/test.
+
+---
+
+## 🧭 Sơ đồ Git Flow (Minh họa trực quan)
+
+```mermaid
+graph TD
+    A[main] -->|tạo branch| B(phu-branch)
+    A --> C(dat-branch)
+    B -->|merge sớm| A
+    C -->|merge trễ, không cập nhật main| X[Lỗi, Code Phú có thể mất]
+    C -->|git pull origin main trước khi merge| D[OK - an toàn]
+```
+
+---
+
+### Mô tả quy trình pull request:
+1. Developer tạo branch từ main
+2. Code và commit trên nhánh riêng
+3. Trước khi PR, pull main về resolve conflict
+4. Push code → Tạo Pull Request
+5. Reviewer xem & duyệt → Merge lên main
+
+📌 Luôn nhớ: **pull main trước khi merge** nhằm tránh conflict!
+
+---
+🎉 Chúc cả nhóm làm việc hiệu quả, teamwork đồng bộ!
 
 ## Liên hệ 📞   
 - Email: contact@movieticketbox.com

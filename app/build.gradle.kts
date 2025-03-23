@@ -45,6 +45,7 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+    implementation(libs.tools.core)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -59,5 +60,20 @@ dependencies {
     implementation ("androidx.recyclerview:recyclerview:1.2.1")
     implementation ("com.google.android.material:material:1.4.0")
     implementation ("androidx.cardview:cardview:1.0.0")
+
+     //Zalopayment
+    implementation(fileTree(
+         mapOf(
+             "dir" to "C:\\projects\\PRM\\MovieTicketBox\\AndroidStudioZaloPay",
+             "include" to listOf("*.aar","*.jar"),
+             "exclude" to listOf("")
+        )
+    ))
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.ext.junit)
+    androidTestImplementation(libs.espresso.core)
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+    implementation("com.squareup.okhttp3:okhttp:4.6.0")
+    implementation("commons-codec:commons-codec:1.14")
 
 }

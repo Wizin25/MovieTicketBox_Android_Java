@@ -31,6 +31,9 @@
             android:exported="true"/>
         <activity android:name=".ui.Movie.MovieDetailsActivity" />
         <activity android:name=".ui.Profile.SelectSeatActivity"/>
+        <activity android:name=".PaymentNotification"/>
+        <activity android:name=".OrderPayment"/>
+
     </application>
 
 </manifest>

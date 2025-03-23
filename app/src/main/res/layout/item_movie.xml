@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@color/black">
+
+    <!-- Poster -->
+    <ImageView
+        android:id="@+id/imgPoster"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg_rounded"
+        android:contentDescription="Movie Poster" />
+
+    <!-- Tựa đề -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Movie Title"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp" />
+
+    <!-- Thời lượng + thể loại -->
+    <TextView
+        android:id="@+id/tvDurationGenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Duration - Genre"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="4dp" />
+
+    <!-- Rating -->
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="⭐ 4.5 (1.500)"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="6dp" />
+
+</LinearLayout>

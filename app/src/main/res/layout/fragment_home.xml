@@ -1,13 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".ui.Home.Home">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/homeContainer"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black">
 
-</FrameLayout>
+        <!-- Dòng đầu: Hi tên người dùng -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/tvHi"
+            android:layout_width="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:text="hi, phan tấn phú 👋"
+            android:textSize="15sp"
+            android:textColor="@android:color/white"
+            android:textStyle="normal"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Dòng dưới: Welcome back -->
+        <TextView
+            android:id="@+id/tvWelcomeBack"
+            android:layout_marginStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome back"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Now Playing Section -->
+        <TextView
+            android:id="@+id/tvNowPlaying"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Now Playing"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="12dp" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerMovies"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="650dp"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:layout_marginBottom="24dp" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

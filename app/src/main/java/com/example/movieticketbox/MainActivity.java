@@ -25,10 +25,11 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
         BottomNavigationView navView = findViewById(R.id.bottom_nav_view);
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_ticket, R.id.navigation_movie, R.id.navigation_profile)
+                R.id.navigation_home, R.id.fragment_booked_tickets, R.id.navigation_movie, R.id.navigation_profile)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
 

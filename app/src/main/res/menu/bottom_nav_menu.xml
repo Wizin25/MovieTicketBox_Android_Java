@@ -4,6 +4,14 @@
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home"
         android:title="Home"/>
+
+    <fragment
+        android:id="@+id/fragment_booked_tickets"
+        android:icon="@drawable/ic_ticket"
+        android:name="com.example.movieticketbox.ui.Ticket.BookedTicketsFragment"
+        android:label="fragment_booked_tickets"
+        />
+
     <item
         android:id="@+id/navigation_ticket"
         android:icon="@drawable/ic_ticket"

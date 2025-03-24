@@ -1,55 +1,56 @@
 package com.example.movieticketbox.ui.Ticket;
 
-import androidx.lifecycle.ViewModelProvider;
-import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
+public class Ticket {
+    private int id;
+    private int seatId;
+    private String seatName;
+    private String movieName;
+    private String showDateTime;
+    private int price;
+    private int status;
 
-import com.example.movieticketbox.R;
+    // Constructor
+    public Ticket(int id, int seatId, String seatName, String movieName, String showDateTime, int price, int status) {
+        this.id = id;
+        this.seatId = seatId;
+        this.seatName = seatName;
+        this.movieName = movieName;
+        this.showDateTime = showDateTime;
+        this.price = price;
+        this.status = status;
+    }
 
-public class Ticket extends Fragment {
+    // Getters
+    public String getMovieName() { return movieName; }
+    public String getShowDateTime() { return showDateTime; }
+    public String getSeatName() { return seatName; }
+    public int getPrice() { return price; }
+    public int getStatus() { return status; }
 
-    private TicketViewModel mViewModel;
+    // Setters (Nếu bạn cần thay đổi giá trị của các thuộc tính)
+    public void setMovieName(String movieName) { this.movieName = movieName; }
+    public void setShowDateTime(String showDateTime) { this.showDateTime = showDateTime; }
+    public void setSeatName(String seatName) { this.seatName = seatName; }
+    public void setPrice(int price) { this.price = price; }
+    public void setStatus(int status) { this.status = status; }
 
-    private ImageView btnBack, imgMoviePoster;
-    private TextView txtMovieTitle, txtMovieDetails, txtShowTime, txtSeat, txtPrice, txtCinema, txtOrderID;
+    // Override phương thức toString() để dễ dàng debug
+    @Override
+    public String toString() {
+        return "Ticket{id=" + id + ", seatName='" + seatName + "', movieName='" + movieName + "', showDateTime='" + showDateTime + "', price=" + price + "}";
+    }
 
-    public static Ticket newInstance() {
-        return new Ticket();
+    // Override equals và hashCode nếu bạn cần so sánh các đối tượng Ticket
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Ticket ticket = (Ticket) obj;
+        return id == ticket.id;
     }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_ticket, container, false);
-
-        // Ánh xạ các thành phần UI
-        btnBack = view.findViewById(R.id.btnBack);
-        imgMoviePoster = view.findViewById(R.id.imgMoviePoster);
-        txtMovieTitle = view.findViewById(R.id.txtMovieTitle);
-        txtMovieDetails = view.findViewById(R.id.txtMovieDetails);
-        txtShowTime = view.findViewById(R.id.txtShowTime);
-        txtSeat = view.findViewById(R.id.txtSeat);
-        txtPrice = view.findViewById(R.id.txtPrice);
-        txtCinema = view.findViewById(R.id.txtCinema);
-        txtOrderID = view.findViewById(R.id.txtOrderID);
-
-        // Xử lý sự kiện nút back
-        btnBack.setOnClickListener(v -> getActivity().onBackPressed());
-
-        return view;
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(TicketViewModel.class);
-        // TODO: Thêm logic xử lý với ViewModel nếu cần
+    public int hashCode() {
+        return Integer.hashCode(id);
     }
 }

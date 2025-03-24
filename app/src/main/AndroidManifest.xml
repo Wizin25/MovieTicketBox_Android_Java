@@ -40,7 +40,14 @@
         <activity android:name=".ui.Profile.SelectSeatActivity"/>
         <activity android:name=".PaymentNotification"/>
         <activity android:name=".OrderPayment"/>
-        <activity android:name=".ui.Home.MapActivity" />
+<!--        <activity android:name=".ui.Home.MapActivity" />-->
+        <activity android:name=".ui.Ticket.Ticket"/>
+        <activity android:name=".ui.Ticket.TicketFragment"/>
+        <activity android:name=".ui.Ticket.TicketAdapter"/>
+        <activity android:name=".ui.Ticket.TicketResponse"/>
+
+
+
 
     </application>
 

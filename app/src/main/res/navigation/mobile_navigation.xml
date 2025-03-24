@@ -3,26 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/navigation_home">
+    app:startDestination="@id/navigation_home"> <!-- Đảm bảo đây là fragment đầu tiên -->
 
+    <!-- Home Fragment -->
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.movieticketbox.ui.Home.Home"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
+
+    <!-- Ticket Fragment -->
     <fragment
         android:id="@+id/navigation_ticket"
-        android:name="com.example.movieticketbox.ui.Ticket.Ticket"
+        android:name="com.example.movieticketbox.ui.Ticket.TicketFragment"
         android:label="Ticket"
         tools:layout="@layout/fragment_ticket" />
+
+    <!-- Booked Tickets Fragment -->
+    <fragment
+        android:id="@+id/fragment_booked_tickets"
+        android:name="com.example.movieticketbox.ui.Ticket.BookedTicketsFragment"
+        android:label="fragment_booked_tickets"
+        tools:layout="@layout/fragment_booked_tickets" /> <!-- Chỉnh lại tên fragment -->
+    <!-- Đảm bảo layout là fragment_booked_ticket -->
+
+    <!-- Movie Fragment -->
     <fragment
         android:id="@+id/navigation_movie"
         android:name="com.example.movieticketbox.ui.Movie.Movie"
-        android:label="fragment_ticket"
+        android:label="Movie"
         tools:layout="@layout/fragment_movie" />
+
+    <!-- Profile Fragment -->
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.movieticketbox.ui.Profile.Profile"
-        android:label="fragment_profile"
+        android:label="Profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

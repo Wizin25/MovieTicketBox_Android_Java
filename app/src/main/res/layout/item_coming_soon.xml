@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/imgComingPoster"
+        android:layout_width="140dp"
+        android:layout_height="210dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg_rounded"
+        android:contentDescription="Poster" />
+
+    <TextView
+        android:id="@+id/tvComingTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Movie Title"
+        android:textColor="#FFD700"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:paddingTop="6dp"
+        android:maxLines="2"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/tvComingGenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Genre"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/tvComingDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Release Date"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+</LinearLayout>

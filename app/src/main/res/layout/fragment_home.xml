@@ -58,15 +58,75 @@
             android:id="@+id/viewPagerMovies"
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"
-            android:layout_height="650dp"
+            android:layout_height="wrap_content"
             android:clipToPadding="false"
             android:clipChildren="false"
             android:paddingStart="40dp"
             android:paddingEnd="40dp"
             android:layout_marginBottom="24dp" />
+        <!-- Coming Soon Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:layout_marginBottom="8dp">
 
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Coming soon"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See all >"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_marginEnd="4dp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewComingSoon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginBottom="40dp"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center" />
+        <!-- Visit Cinema Title -->
+        <TextView
+            android:id="@+id/tvVisitCinema"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Visit Cinema"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="12dp" />
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_margin="16dp"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"/>
     </LinearLayout>
-
 
 </ScrollView>

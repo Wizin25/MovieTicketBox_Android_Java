@@ -29,4 +29,3 @@ public class PaymentNotification extends AppCompatActivity {
         txtNotification.setText(intent.getStringExtra("result"));
     }
 }
-

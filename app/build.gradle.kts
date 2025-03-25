@@ -64,7 +64,7 @@ dependencies {
      //Zalopayment
     implementation(fileTree(
          mapOf(
-             "dir" to "C:\\projects\\PRM\\MovieTicketBox\\AndroidStudioZaloPay",
+             "dir" to "C:\\Users\\DELL\\Downloads\\OnelinePayment\\OnelinePayment\\AndroidStudioZaloPay",
              "include" to listOf("*.aar","*.jar"),
              "exclude" to listOf("")
         )

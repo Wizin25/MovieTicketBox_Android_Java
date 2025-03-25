@@ -33,6 +33,8 @@
         <activity android:name=".ui.Profile.SelectSeatActivity"/>
         <activity android:name=".PaymentNotification"/>
         <activity android:name=".OrderPayment"/>
+        <activity android:name=".ui.Profile.MovieSelectionActivity"/>
+        <activity android:name=".ui.Profile.ShowtimeSelectionActivity"/>
 
     </application>
 

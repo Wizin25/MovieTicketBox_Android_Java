@@ -119,4 +119,3 @@ public class OrderPayment extends AppCompatActivity {
         ZaloPaySDK.getInstance().onResult(intent);
     }
 }
-

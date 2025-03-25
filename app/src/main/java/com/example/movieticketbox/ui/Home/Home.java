@@ -113,15 +113,15 @@ public class Home extends Fragment implements OnMapReadyCallback {
         // Hiệu ứng cuộn mượt + hiện poster 2 bên
         viewPager.setClipToPadding(false);
         viewPager.setClipChildren(false);
-        viewPager.setOffscreenPageLimit(3);
+        viewPager.setOffscreenPageLimit(1);
         viewPager.getChildAt(0).setOverScrollMode(View.OVER_SCROLL_NEVER);
 
         // Gắn PageTransformer
         viewPager.setPageTransformer((page, position) -> {
-            float scale = 0.85f + (1 - Math.abs(position)) * 0.15f;
+            float scale = 0.75f + (1 - Math.abs(position)) * 0.25f;
             page.setScaleY(scale);
-            page.setAlpha(0.7f + (1 - Math.abs(position)) * 0.3f);
-            page.setTranslationX(-position * page.getWidth() * 0.1f); // Giảm 0.2f xuống 0.1f
+            page.setAlpha(0.5f + (1 - Math.abs(position)) * 0.5f);
+            page.setTranslationX(-position * page.getWidth() * 0.01f); // Giảm 0.2f xuống 0.1f
         });
 
 //        if (savedInstanceState == null) {

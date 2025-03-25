@@ -81,5 +81,8 @@ dependencies {
     implementation(libs.play.services.maps)
     implementation(libs.play.services.location)
 
+    implementation ("com.github.bumptech.glide:glide:4.15.1") // Hoặc phiên bản mới nhất
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
+
 
 }

@@ -10,6 +10,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.movieticketbox.OrderPayment;
+import com.example.movieticketbox.R;
+
 public class Payment extends AppCompatActivity {
 
     Button btnContinue;

@@ -4,46 +4,51 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import com.bumptech.glide.Glide;
 import com.example.movieticketbox.R;
 
 public class MovieDetailsActivity extends AppCompatActivity {
 
+    private ImageView imgMovieBackground;
+    private TextView txtMovieTitle, txtMovieDirector, txtMovieDuration, txtMovieGenre, txtMovieDescription;
+    private Button btnContinue;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_details);
 
+        imgMovieBackground = findViewById(R.id.imgMovieBackground);
+        txtMovieTitle = findViewById(R.id.txtMovieTitle);
+        txtMovieDirector = findViewById(R.id.txtMovieDirector);
+        txtMovieDuration = findViewById(R.id.txtMovieDuration);
+        txtMovieGenre = findViewById(R.id.txtMovieGenre);
+        txtMovieDescription = findViewById(R.id.txtMovieDescription);
+        btnContinue = findViewById(R.id.btnContinue);
+
         // Nhận dữ liệu từ Intent
         String title = getIntent().getStringExtra("MOVIE_TITLE");
-        String rating = getIntent().getStringExtra("MOVIE_RATING");
+        String director = getIntent().getStringExtra("MOVIE_DIRECTOR");
         String duration = getIntent().getStringExtra("MOVIE_DURATION");
         String genre = getIntent().getStringExtra("MOVIE_GENRE");
-        int imageResId = getIntent().getIntExtra("MOVIE_IMAGE", R.drawable.default_image);
+        String description = getIntent().getStringExtra("MOVIE_DESCRIPTION");
+        int imageResId = getIntent().getIntExtra("MOVIE_IMAGE", R.drawable.movie_1);
 
-        // Ánh xạ các TextView
-        TextView txtTitle = findViewById(R.id.txtMovieTitle);
-        TextView txtRating = findViewById(R.id.txtMovieRating);
-        TextView txtDuration = findViewById(R.id.txtMovieDuration);
-        TextView txtGenre = findViewById(R.id.txtMovieGenre);
-        ImageView imgBackground = findViewById(R.id.imgMovieBackground);
-        Button btnContinue = findViewById(R.id.btnContinue);
-        ImageView btnBack = findViewById(R.id.btnBack);
+        // Hiển thị dữ liệu lên giao diện
+        txtMovieTitle.setText("Title: " + title);
+        txtMovieDirector.setText(director);
+        txtMovieDuration.setText("Duration: " + duration);
+        txtMovieGenre.setText("Genre:                     " + genre);
+        txtMovieDescription.setText(description);
 
-        // Hiển thị thông tin phim
-        txtTitle.setText(title != null ? title : "Unknown Title");
-        txtRating.setText("Rating: " + (rating != null ? rating : "N/A"));
-        txtDuration.setText("Duration: " + (duration != null ? duration : "N/A"));
-        txtGenre.setText("Genre: " + (genre != null ? genre : "N/A"));
-        imgBackground.setImageResource(imageResId);
+        Glide.with(this)
+                .load(imageResId)
+                .placeholder(R.drawable.movie_1)
+                .into(imgMovieBackground);
 
-        // Xử lý nút quay lại
-        btnBack.setOnClickListener(v -> finish());
+        btnContinue.setOnClickListener(v -> finish()); // Đóng Activity khi bấm nút Continue
 
-        // Xử lý nút Continue
-        btnContinue.setOnClickListener(v ->
-                Toast.makeText(MovieDetailsActivity.this, "Continue clicked!", Toast.LENGTH_SHORT).show()
-        );
     }
 }

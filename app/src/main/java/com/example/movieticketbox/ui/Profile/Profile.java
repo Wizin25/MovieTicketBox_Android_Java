@@ -30,7 +30,7 @@ public class Profile extends Fragment {
     }
 
     private void openSelectSeat() {
-        startActivity(new Intent(getActivity(), SelectSeatActivity.class));
+        startActivity(new Intent(getActivity(), MovieSelectionActivity.class));
 
 
     }

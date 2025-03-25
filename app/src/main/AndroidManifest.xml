@@ -40,7 +40,11 @@
         <activity android:name=".ui.Profile.SelectSeatActivity"/>
         <activity android:name=".PaymentNotification"/>
         <activity android:name=".OrderPayment"/>
-        <activity android:name=".ui.Home.MapActivity" />
+        <activity android:name=".ui.Ticket.BookedTicketsFragment"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".ui.Profile.MovieSelectionActivity"/>
+        <activity android:name=".ui.Profile.ShowtimeSelectionActivity"/>
 
     </application>
 

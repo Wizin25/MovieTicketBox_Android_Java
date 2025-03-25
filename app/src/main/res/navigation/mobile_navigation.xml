@@ -11,13 +11,13 @@
         android:label="Home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/navigation_ticket"
-        android:name="com.example.movieticketbox.ui.Ticket.Ticket"
+        android:id="@+id/fragment_booked_tickets"
+        android:name="com.example.movieticketbox.ui.Ticket.BookedTicketsFragment"
         android:label="Ticket"
-        tools:layout="@layout/fragment_ticket" />
+        tools:layout="@layout/fragment_booked_tickets" />
     <fragment
         android:id="@+id/navigation_movie"
-        android:name="com.example.movieticketbox.ui.Movie.Movie"
+        android:name="com.example.movieticketbox.ui.Movie.MovieFragment"
         android:label="fragment_ticket"
         tools:layout="@layout/fragment_movie" />
     <fragment

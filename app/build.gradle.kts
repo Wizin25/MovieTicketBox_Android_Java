@@ -64,7 +64,7 @@ dependencies {
      //Zalopayment
     implementation(fileTree(
          mapOf(
-             "dir" to "C:\\projects\\PRM\\MovieTicketBox\\AndroidStudioZaloPay",
+             "dir" to "E:\\AndroidStudioZaloPay",
              "include" to listOf("*.aar","*.jar"),
              "exclude" to listOf("")
         )
@@ -75,5 +75,7 @@ dependencies {
     implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.squareup.okhttp3:okhttp:4.6.0")
     implementation("commons-codec:commons-codec:1.14")
+    implementation ("com.github.bumptech.glide:glide:4.15.1") // Hoặc phiên bản mới nhất
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
 
 }
